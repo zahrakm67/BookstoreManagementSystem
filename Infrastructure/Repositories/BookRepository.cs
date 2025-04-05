@@ -14,14 +14,14 @@ public class BookRepository(CoreContext coreContext) : IBookRepository
 
     public async Task<Book?> GetByIdAsync(long id)
     {
-        return await coreContext.Books.FirstOrDefaultAsync(b=> b.Id==id);
+        return await coreContext.Books.FirstOrDefaultAsync(b=> b.BookId==id);
     }
 
     public async Task<long> AddAsync(Book book)
     {
         await coreContext.Books.AddAsync(book, CancellationToken.None);
         await coreContext.SaveChangesAsync(CancellationToken.None);
-        return book.Id;
+        return book.BookId;
     }
 
     public async Task DeleteAsync(Book book)
