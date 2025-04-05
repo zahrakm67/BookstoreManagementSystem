@@ -9,28 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11a4a80d-4e4a-4f72-9817-cd45025742fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Abstractions/IBookService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/DTOs/Book/BookDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Services/Book/BookService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookstoreManagementSystem.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookstoreManagementSystem/BookstoreManagementSystem.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookstoreManagementSystem/BookstoreManagementSystem.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookstoreManagementSystem/Controllers/BooksController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookstoreManagementSystem/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookstoreManagementSystem/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookstoreManagementSystem/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookstoreManagementSystem/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookstoreManagementSystem/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookstoreManagementSystem/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Abstractions/IBookRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Abstractions/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Entities/Book.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Contexts/CoreContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Repositories/BookRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
-    </list>
+    <list default="true" id="11a4a80d-4e4a-4f72-9817-cd45025742fa" name="Changes" comment="Add initial project structure with essential configurations and entities" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,10 +26,11 @@
     <setting file="file://$PROJECT_DIR$/../Old/BookstoreManagementSystem/Domain/Entities/Book.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Old/BookstoreManagementSystem/Infrastructure/Contexts/CoreContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2vJfaFbROzzmhIhH9M4Jt3rNFTN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -64,7 +44,7 @@
     ".NET Launch Settings Profile.BookstoreManagementSystem: IIS Express.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -130,13 +110,25 @@
       <updated>1743868160917</updated>
       <workItem from="1743868162424" duration="1719000" />
     </task>
+    <task id="LOCAL-00001" summary="Add initial project structure with essential configurations and entities">
+      <option name="closed" value="true" />
+      <created>1743870549968</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743870549969</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Add initial project structure with essential configurations and entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add initial project structure with essential configurations and entities" />
   </component>
 </project>

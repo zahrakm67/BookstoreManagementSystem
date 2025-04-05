@@ -6,7 +6,7 @@ namespace BookstoreManagementSystem.Controllers;
 // [Authorize]
 [Route("api/[controller]")]
 [ApiController]
-public class BooksController(IBookService bookService) : ControllerBase
+public class BooksController(IBookService bookService,ILogger<BooksController> logger) : ControllerBase
 {
     [HttpGet]
     public async Task<IActionResult> GetBooks()

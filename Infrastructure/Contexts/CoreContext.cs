@@ -3,12 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Contexts;
 
-public class CoreContext:DbContext
+public class CoreContext(DbContextOptions<CoreContext> options) : DbContext(options)
 {
-    public CoreContext(DbContextOptions<CoreContext> options) : base(options)
-    {
-    }
-
     // DbSets for your entities
     public DbSet<Book?> Books { get; set; }
 
