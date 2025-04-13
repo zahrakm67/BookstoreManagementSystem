@@ -2,7 +2,7 @@
 
 public partial class Book
 {
-    public int BookId { get; set; }
+    public int Id { get; set; }
 
     public string Title { get; set; } = null!;
 
@@ -10,7 +10,7 @@ public partial class Book
 
     public int? PublisherId { get; set; }
 
-    public DateOnly? PublicationDate { get; set; }
+    public DateTime? PublicationDate { get; set; }
 
     public decimal? Price { get; set; }
 

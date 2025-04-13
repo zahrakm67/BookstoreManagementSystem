@@ -1,6 +1,6 @@
 using Application.Abstractions;
 using Application.DTOs.Book;
-using Domain.Abstractions;
+using Domain.Repository.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.Services.Book;

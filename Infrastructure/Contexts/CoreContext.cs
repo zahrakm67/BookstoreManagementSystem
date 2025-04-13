@@ -23,9 +23,9 @@ public class CoreContext(DbContextOptions<CoreContext> options) : DbContext(opti
     {
         modelBuilder.Entity<Author>(entity =>
         {
-            entity.HasKey(e => e.AuthorId);
+            entity.HasKey(e => e.Id);
 
-            entity.Property(e => e.AuthorId).HasColumnName("AuthorID");
+            entity.Property(e => e.Id);
             entity.Property(e => e.Biography).HasColumnType("text");
             entity.Property(e => e.FirstName)
                 .HasMaxLength(100)
@@ -37,11 +37,11 @@ public class CoreContext(DbContextOptions<CoreContext> options) : DbContext(opti
 
         modelBuilder.Entity<Book>(entity =>
         {
-            entity.HasKey(e => e.BookId);
+            entity.HasKey(e => e.Id);
 
             entity.HasIndex(e => e.Isbn, "UQ__Books__447D36EA4793451D").IsUnique();
 
-            entity.Property(e => e.BookId).HasColumnName("BookID");
+            entity.Property(e => e.Id);
             entity.Property(e => e.Description).HasColumnType("text");
             entity.Property(e => e.Isbn)
                 .HasMaxLength(50)
@@ -72,18 +72,18 @@ public class CoreContext(DbContextOptions<CoreContext> options) : DbContext(opti
                     {
                         j.HasKey("BookId", "AuthorId");
                         j.ToTable("BookAuthors");
-                        j.IndexerProperty<int>("BookId").HasColumnName("BookID");
-                        j.IndexerProperty<int>("AuthorId").HasColumnName("AuthorID");
+                        j.IndexerProperty<int>("BookId");
+                        j.IndexerProperty<int>("AuthorId");
                     });
         });
 
         modelBuilder.Entity<Customer>(entity =>
         {
-            entity.HasKey(e => e.CustomerId);
+            entity.HasKey(e => e.Id);
 
             entity.HasIndex(e => e.Email, "UQ__Customer__A9D10534EFFD553C").IsUnique();
 
-            entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
+            entity.Property(e => e.Id);
             entity.Property(e => e.Address)
                 .HasMaxLength(255)
                 .IsUnicode(false);
@@ -103,10 +103,10 @@ public class CoreContext(DbContextOptions<CoreContext> options) : DbContext(opti
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderId);
+            entity.HasKey(e => e.Id);
 
-            entity.Property(e => e.OrderId).HasColumnName("OrderID");
-            entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
+            entity.Property(e => e.Id);
+            entity.Property(e => e.CustomerId);
             entity.Property(e => e.OrderDate)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -122,11 +122,11 @@ public class CoreContext(DbContextOptions<CoreContext> options) : DbContext(opti
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => e.OrderDetailId);
+            entity.HasKey(e => e.Id);
 
-            entity.Property(e => e.OrderDetailId).HasColumnName("OrderDetailID");
-            entity.Property(e => e.BookId).HasColumnName("BookID");
-            entity.Property(e => e.OrderId).HasColumnName("OrderID");
+            entity.Property(e => e.Id);
+            entity.Property(e => e.BookId);
+            entity.Property(e => e.OrderId);
             entity.Property(e => e.UnitPrice).HasColumnType("decimal(10, 2)");
 
             entity.HasOne(d => d.Book).WithMany(p => p.OrderDetails)
@@ -140,9 +140,9 @@ public class CoreContext(DbContextOptions<CoreContext> options) : DbContext(opti
 
         modelBuilder.Entity<Publisher>(entity =>
         {
-            entity.HasKey(e => e.PublisherId);
+            entity.HasKey(e => e.Id);
 
-            entity.Property(e => e.PublisherId).HasColumnName("PublisherID");
+            entity.Property(e => e.Id);
             entity.Property(e => e.Address)
                 .HasMaxLength(255)
                 .IsUnicode(false);

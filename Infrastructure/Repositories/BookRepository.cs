@@ -1,5 +1,5 @@
 using Domain.Entities;
-using Domain.Abstractions;
+using Domain.Repository.Abstractions;
 using Infrastructure.Contexts;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,14 +14,14 @@ public class BookRepository(CoreContext coreContext) : IBookRepository
 
     public async Task<Book?> GetByIdAsync(long id)
     {
-        return await coreContext.Books.FirstOrDefaultAsync(b=> b.BookId==id);
+        return await coreContext.Books.FirstOrDefaultAsync(b=> b.Id==id);
     }
 
     public async Task<long> AddAsync(Book book)
     {
         await coreContext.Books.AddAsync(book, CancellationToken.None);
         await coreContext.SaveChangesAsync(CancellationToken.None);
-        return book.BookId;
+        return book.Id;
     }
 
     public async Task DeleteAsync(Book book)

@@ -1,6 +1,6 @@
 using Domain.Entities;
 
-namespace Domain.Abstractions;
+namespace Domain.Repository.Abstractions;
 
 public interface IBookRepository
 {

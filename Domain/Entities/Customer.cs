@@ -2,7 +2,7 @@
 
 public partial class Customer
 {
-    public int CustomerId { get; set; }
+    public int Id { get; set; }
 
     public string? FirstName { get; set; }
 

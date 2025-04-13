@@ -9,7 +9,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11a4a80d-4e4a-4f72-9817-cd45025742fa" name="Changes" comment="Add initial project structure with essential configurations and entities" />
+    <list default="true" id="11a4a80d-4e4a-4f72-9817-cd45025742fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Application/Abstractions/IPublisherService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/DTOs/Auther/AuthorDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/DTOs/Customer/CustomerDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/DTOs/Order/OrderDetailDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/DTOs/Order/OrderDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/DTOs/Publisher/PublisherDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Services/Publisher/PublisherService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookstoreManagementSystem/Configs/DependencyInjectionStartupConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookstoreManagementSystem/Controllers/PublisherController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/IUnitOfWork.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Repository/Abstractions/IPublisherRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/Repository/IGenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Repositories/GenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/Repositories/PublishRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/UnitOfWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BookstoreManagementSystem/.idea/dataSources/9f3e162e-0280-4a41-9496-5505b878f645.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BookstoreManagementSystem/.idea/dataSources/9f3e162e-0280-4a41-9496-5505b878f645/storage_v2/_src_/database/bookstore.mCfKeQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BookstoreManagementSystem/.idea/dataSources/9f3e162e-0280-4a41-9496-5505b878f645/storage_v2/_src_/database/bookstore.mCfKeQ/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BookstoreManagementSystem/.idea/dataSources/9f3e162e-0280-4a41-9496-5505b878f645/storage_v2/_src_/database/bookstore.mCfKeQ/schema/dbo.sYMBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BookstoreManagementSystem/.idea/dataSources/9f3e162e-0280-4a41-9496-5505b878f645/storage_v2/_src_/database/bookstore.mCfKeQ/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BookstoreManagementSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BookstoreManagementSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/DTOs/Book/BookDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/DTOs/Book/BookDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Services/Book/BookService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Services/Book/BookService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookstoreManagementSystem.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/BookstoreManagementSystem.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookstoreManagementSystem/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BookstoreManagementSystem/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Abstractions/IBookRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Repository/Abstractions/IBookRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Abstractions/IUnitOfWork.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entities/Author.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/Author.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entities/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/Book.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entities/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/Customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entities/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entities/OrderDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/OrderDetail.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entities/Publisher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Entities/Publisher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Contexts/CoreContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Contexts/CoreContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Repositories/BookRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Repositories/BookRepository.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,10 +59,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;zahrakm67&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/zahrakm67/BookstoreManagementSystem&quot;,
+    &quot;accountId&quot;: &quot;5a9dce03-c56d-4329-9bed-4a356dac6765&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../Old/BookstoreManagementSystem/Domain/Abstractions/IBookRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c6f4974df4d64d12a73559c172e1c75886020/f0/a42d75ff/SqlServerServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Old/BookstoreManagementSystem/Domain/Abstractions/IBookRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Old/BookstoreManagementSystem/Domain/Entities/Book.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Old/BookstoreManagementSystem/Infrastructure/Contexts/CoreContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Old/BookstoreManagementSystem/Infrastructure/Contexts/CoreContext.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectColorInfo">{
@@ -41,10 +92,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.BookstoreManagementSystem: IIS Express.executor": "Run",
+    ".NET Launch Settings Profile.BookstoreManagementSystem: IIS Express.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "3-Migration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -109,6 +160,9 @@
       <option name="presentableId" value="Default" />
       <updated>1743868160917</updated>
       <workItem from="1743868162424" duration="1719000" />
+      <workItem from="1744271085414" duration="809000" />
+      <workItem from="1744380043936" duration="5767000" />
+      <workItem from="1744531004070" duration="556000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with essential configurations and entities">
       <option name="closed" value="true" />

@@ -1,3 +1,4 @@
+using BookstoreManagementSystem.Configs;
 using Infrastructure.Contexts;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,11 +8,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// Get the connection string from appsettings.json
-var connectionString = builder.Configuration.GetConnectionString("CoreDatabase");
 
-// Register EF Core
-builder.Services.AddDbContext<CoreContext>(options => options.UseSqlServer(connectionString));
+// Call your custom DI configuration.
+DependencyInjectionStartupConfig.Setup(builder.Services, builder.Configuration);
+//
+// // Get the connection string from appsettings.json
+// var connectionString = builder.Configuration.GetConnectionString("CoreDatabase");
+//
+// // Register EF Core
+// builder.Services.AddDbContext<CoreContext>(options => options.UseSqlServer(connectionString));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
