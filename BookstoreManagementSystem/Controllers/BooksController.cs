@@ -1,9 +1,10 @@
 using Application.Abstractions;
 using Application.DTOs.Book;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookstoreManagementSystem.Controllers;
-// [Authorize]
+[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class BooksController(IBookService bookService,ILogger<BooksController> logger) : ControllerBase
