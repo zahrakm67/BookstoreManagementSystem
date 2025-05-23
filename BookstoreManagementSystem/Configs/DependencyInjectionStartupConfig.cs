@@ -21,6 +21,7 @@ public static class DependencyInjectionStartupConfig
     
     private static void SetupDbContexts(IServiceCollection services, IConfiguration configuration)
     {
+    
         services.AddDbContext<CoreContext>(options => options
                 .UseSqlServer(configuration.GetConnectionString("CoreDatabase"))
                 .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking), ServiceLifetime.Transient);

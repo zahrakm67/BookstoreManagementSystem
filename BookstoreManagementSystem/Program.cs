@@ -1,6 +1,6 @@
 using BookstoreManagementSystem.Configs;
 using Infrastructure.Contexts;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,16 +11,26 @@ builder.Services.AddControllers();
 
 // Call your custom DI configuration.
 DependencyInjectionStartupConfig.Setup(builder.Services, builder.Configuration);
-//
-// // Get the connection string from appsettings.json
-// var connectionString = builder.Configuration.GetConnectionString("CoreDatabase");
-//
-// // Register EF Core
-// builder.Services.AddDbContext<CoreContext>(options => options.UseSqlServer(connectionString));
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+// Add Identity
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<CoreContext>()
+    .AddDefaultTokenProviders(); // Needed for reset password, email confirmation, etc.
+
+// (Optional) Configure Identity options
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequiredLength = 6;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireLowercase = false;
+});
+
 
 var app = builder.Build();
 
@@ -33,6 +43,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
